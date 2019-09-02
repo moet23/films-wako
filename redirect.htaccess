@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^index.html$ https://films-wako.studio.design [L,R=301]
