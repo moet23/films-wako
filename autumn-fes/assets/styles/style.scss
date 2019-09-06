@@ -97,4 +97,11 @@ main{
       padding: 40px;
     }
   }
+  #about{
+   width: 100%;
+   color: $color-blk;
+   .detail{
+    max-width: 420px;
+   }
+ }
 }
