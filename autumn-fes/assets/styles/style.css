@@ -22,7 +22,13 @@ main {
 }
 
 main article {
-  padding: 40px;
+  padding: 10px;
+}
+
+@media all and (min-width: 768px) {
+  main article {
+    padding: 40px;
+  }
 }
 
 .mainvisual {
