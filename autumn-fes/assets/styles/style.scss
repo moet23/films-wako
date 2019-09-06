@@ -1,0 +1,107 @@
+$color_wht: #fff;
+$color-blk: rgba(0,0,0,.6);
+$color-gry: rgba(0,0,0,.05);
+header{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  line-height: 40px;
+  clear: both;
+  color: $color_wht;
+  li{
+    padding: 5px;
+    a{
+      border-right: 1px solid $color_wht;
+      padding-right: 10px;
+      color: $color_wht;
+    }
+  }
+}
+main{
+  z-index: 10;
+  .mainvisual{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    video{
+    }
+    .contains{
+      position: relative;
+      margin-top: 40px;
+      color: $color_wht;
+      .logo{
+        font-size: 80px;
+        line-height: 1;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+      @media all and (min-width:768px){
+        .logo{
+          font-size: 150px;
+        }
+      }
+      .detail{
+        display: block;
+        margin: 20px 0;
+      }
+    }
+    p{
+      font-size: 30px;
+    }
+    #bg-video {
+    position:absolute;
+    right:0;
+    bottom:0;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    z-index:-1;
+    }
+    .overlay{
+      background:url('../../assets/images/dot_ptn10-30.png') repeat ;
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      .mv_map{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+      }
+      @media all and (min-width:768px){
+        .mv_map{
+          bottom: 60px;
+          right: 40px;
+          width: 50%;
+        }
+      }
+    }
+  }
+  article{
+    padding: 20px 10px;
+    ul,li{
+      list-style: none;
+      padding-left: 0;
+    }
+    .stripe>li:nth-child(2n){
+      background-color: $color-gry;
+    }
+  }
+  @media all and (min-width:768px){
+    article{
+      padding: 40px;
+    }
+  }
+  #about{
+   width: 100%;
+   color: $color-blk;
+   .detail{
+    max-width: 420px;
+   }
+ }
+}
