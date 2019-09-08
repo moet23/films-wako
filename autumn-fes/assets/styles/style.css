@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
 header {
   position: fixed;
   z-index: 99;
@@ -19,6 +23,7 @@ header li a {
 
 main {
   z-index: 10;
+  font-family: 'Poppins', sans-serif;
 }
 
 main .mainvisual {
@@ -38,7 +43,6 @@ main .mainvisual .contains .logo {
   font-size: 80px;
   line-height: 1;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
   margin: 0;
 }
 
@@ -93,16 +97,26 @@ main .mainvisual .overlay .mv_map {
 }
 
 main article {
-  padding: 20px 10px;
+  padding: 20px;
+  width: 100%;
+  color: #fff;
 }
 
-main article ul, main article li {
+main article ul {
+  padding: 0;
+}
+
+main article li {
   list-style: none;
-  padding-left: 0;
+  padding: 6px 0 4px;
+}
+
+main article .stripe > li:nth-child(2n-1) {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 main article .stripe > li:nth-child(2n) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.01);
 }
 
 @media all and (min-width: 768px) {
@@ -111,11 +125,13 @@ main article .stripe > li:nth-child(2n) {
   }
 }
 
-main #about {
-  width: 100%;
-  color: rgba(0, 0, 0, 0.6);
+@media all and (min-width: 768px) {
+  main #about .detail {
+    max-width: 480px;
+  }
 }
 
-main #about .detail {
-  max-width: 420px;
+main #contact h1 {
+  text-align: center;
+  margin: 0.67em 0 1.1em;
 }
