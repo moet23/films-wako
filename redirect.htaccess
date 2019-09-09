@@ -1,2 +1,1 @@
-RewriteEngine on
-RewriteRule ^index.html$ https://films-wako.studio.design [L,R=301]
+Redirect 301 / http://www.new-website.com
