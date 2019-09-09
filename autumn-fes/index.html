@@ -17,30 +17,21 @@
   <header>
     <div class="container-fluid">
       <ul class="nav">
-        <li class="nav-item"><a href="#">About</a></li>
-        <li class="nav-item"><a href="#">Contents</a></li>
-        <li class="nav-item"><a href="#">Timetable</a></li>
-        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item menu-no-mobile"><a href="#top">Top</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#contents">Contents</a></li>
+        <li class="nav-item"><a href="#timetable">Timetable</a></li>
+        <li class="nav-item"><a href="#entry" class="menu-push">Entry</a></li>
       </ul>
     </div>
   </header>
   <main>
-    <div class="mainvisual">
+    <div class="background"></div>
+    <div class="mainvisual" id="top">
       <div class="container-fluid contains">
         <h1 class="logo">
           FILMS<br>WAKO<br>AUTUMN<br>FES
         </h1>
-        <ul class="detail">
-          <li>日付 9月16日（月・祝）</li>
-          <li>場所 FILLMS和光</li>
-          <li>時間 
-            <ul>
-              <li>13:00 OPEN</li>
-              <li>22:00 CLOSE</li>
-            </ul>
-          </li>
-          <li>会費 事前1,000円/当日1,100円</li>
-        </ul>
       </div>
       <video id="bg-video" width="100%" height="400px" preload="none" autoplay loop muted style="object-fit: cover;">
         <source src="assets/videos/main.mov" type="video/mp4" />
@@ -48,27 +39,96 @@
       <div class="overlay">
         <img class="mv_map" src="assets/images/map.png">
       </div>
-    </div> 
+      <a href="#entry" class="link-entry-form">参加はこちらから！</a>
+    </div>
     <article id="about">
-        <ul class="detail stripe">
-          <h1>About</h1>
-          <li>日付：9月16日（月・祝）</li>
-          <li>場所：FILLMS和光</li>
-          <li>時間：13:00 OPEN / 22:00 CLOSE</li>
-          </li>
-          <li>会費：事前1,000円/当日1,100円</li>
-          <li>FILMS：WAKO creative team</li>
-        </ul>
+      <h1>About</h1>
+      <ul class="detail stripe">
+        <li>日付：9月16日（月・祝）</li>
+        <li>場所：FILLMS和光</li>
+        <li>時間：13:00 OPEN / 22:00 CLOSE</li>
+        </li>
+        <li>会費：事前1,000円/当日1,100円</li>
+        <li>FILMS：WAKO creative team</li>
+        <li><img src="assets/images/totoro.png" class="image" alt=""></li>
+      </ul>
     </article>
-    <article id="content">
+    <article id="contents">
+      <div class="detail">
+        <h1>Contents</h1>
+        <h3>展示@PhotoStudio</h3>
+        <ul class="stripe">
+          <li>Moe Ikeda　Poster</li>
+          <li>Ryuma Akahori & Yuji Shimizu</li>
+          <li>Taiga Ishii　IoT device</li>
+          <li>Yoshikai　VR</li>
+          <li>Yukina Kai　Nigaoe Painting</li>
+        </ul>
+        <h3>バザー@Lounge</h3>
+        <ul class="stripe">
+          <li>冷えたビールとかそういうの</li>
+          <li>ちょっと気の利いたソフドリも</li>
+          <li>たとえばカラフルソーダフロートとか</li>
+          <li>美味しいオムソバとかそういう感じの</li>
+          <li>美味しいたこ焼き</li>
+        </ul>
+        <h3>フリーマーケット@studio</h3>
+        <ul class="stripe">
+          <li>出品自由</li>
+          <li>買取は基本、当人同士でやりとり</li>
+          <li>※なにかご意見あればいただきたいです</li>
+        </ul>
+      </div>
     </article>
     <article id="timetable">
+      <div class="detail">
+        <h1>Time Table</h1>
+        <ul class="stripe">
+          <li>13:00　OPEN
+            <ul>
+              <li>＊随時＊</li>
+              <li>展示@フォトスタ</li>
+              <li>フリマ出品物エントリー@スタジオ</li>
+              <li>バザー@ラウンジ</li>
+            </ul>
+          </li>
+          <li>14:00　3Dアート展示@スタジオ
+            <ul>
+              <li>Yumikoさんによる3Dアート展示</li>
+            </ul>
+          </li>
+          <li>16:00　フリーマーケット@スタジオ
+            <ul>
+              <li>スタジオにてオープン</li>
+            </ul>
+          </li>
+          <li>19:00　オムニバス講義
+            <ul>
+              <li>・イラストレーター&デザイナーによる<br>『デザインとアートの違い』</li>
+              <li>・我らがアレクサによる<br>『IoTデバイス実装編』</li>
+              <li>・赤堀による『トラックメイカーa.k.a HORI』</li>
+              <li>・和光のパリピによる『VR-VJよしかい』</li>
+            </ul>
+          </li>
+          <li>22:00　フィナーレ</li>
+        </ul>
+      </div>
     </article>
-    <article id="contact">
+    <article id="entry">
+      <h1 id="entry-form">Entry</h1>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrmTHfckRYIRu09JUhUIPq803ExrbUaCJ2REjdsimkG0pffw/viewform?embedded=true" width="100%" height="1060" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
     </article>
   </main>
   <footer>
-    
+    FILMS WAKO Creative Team © All rights reserved
   </footer>
+  <!-- js -->
+  <script src="assets/scripts/smooth-scroll.polyfills.min.js"></script>
+  <script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    header: '#header'
+  });
+  </script>
+  <!-- /js -->
 </body>
 </html>
