@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  font-size: 14px;
 }
 
 header {
@@ -9,6 +10,21 @@ header {
   line-height: 40px;
   clear: both;
   color: #fff;
+}
+
+header .menu-no-mobile {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  header .menu-no-mobile {
+    display: inline;
+  }
+}
+
+header a:hover {
+  color: #42cbd4;
+  text-decoration: underline;
 }
 
 header li {
@@ -85,7 +101,7 @@ main .mainvisual .overlay .mv_map {
   position: absolute;
   width: 100%;
   height: auto;
-  bottom: 0;
+  bottom: 24px;
 }
 
 @media all and (min-width: 768px) {
@@ -96,10 +112,30 @@ main .mainvisual .overlay .mv_map {
   }
 }
 
+main .mainvisual a.link-entry-form {
+  padding: 20px 40px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+  left: 24px;
+  top: 50px;
+  position: relative;
+  z-index: 80;
+  font-size: 20px;
+}
+
+main .mainvisual a.link-entry-form:hover {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  text-decoration: none;
+}
+
 main article {
   padding: 20px;
   width: 100%;
   color: #fff;
+  clear: both;
 }
 
 main article ul {
@@ -119,19 +155,57 @@ main article .stripe > li:nth-child(2n) {
   background-color: rgba(255, 255, 255, 0.01);
 }
 
+main article h3 {
+  margin: 30px 0 20px;
+}
+
 @media all and (min-width: 768px) {
   main article {
     padding: 40px;
   }
 }
 
+main #about .image {
+  margin-top: 20px;
+  opacity: .3;
+  width: 100%;
+}
+
 @media all and (min-width: 768px) {
   main #about .detail {
-    max-width: 480px;
+    width: 33.3%;
   }
 }
 
-main #contact h1 {
+@media all and (min-width: 768px) {
+  main #contents {
+    width: 66.6%;
+    float: right;
+  }
+  main #contents .detail {
+    width: 50%;
+    float: left;
+  }
+}
+
+main #timetable .detail li > ul {
+  margin-left: 60px;
+}
+
+@media all and (min-width: 768px) {
+  main #timetable {
+    width: 33.3%;
+    float: right;
+  }
+}
+
+main #entry h1 {
   text-align: center;
   margin: 0.67em 0 1.1em;
+}
+
+footer {
+  padding: 10px;
+  font-size: 12px;
+  color: #fff;
 }

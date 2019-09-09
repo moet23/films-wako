@@ -5,6 +5,7 @@ $color-p-gry: rgba(255,255,255,.01);
 $color-grad: linear-gradient(to top, #09203f 0%, #537895 100%);
 body{
   background:$color-grad;
+  font-size: 14px;
 }
 header{
   position: fixed;
@@ -13,6 +14,18 @@ header{
   line-height: 40px;
   clear: both;
   color: $color_wht;
+  .menu-no-mobile{
+    display: none;
+  }
+  @media all and (min-width:768px){
+    .menu-no-mobile{
+      display: inline;
+    }
+  }
+  a:hover {
+    color: #42cbd4;
+    text-decoration: underline;
+  }
   li{
     padding: 5px;
     a{
@@ -74,7 +87,7 @@ main{
         position: absolute;
         width: 100%;
         height: auto;
-        bottom: 0;
+        bottom: 24px;
       }
       @media all and (min-width:768px){
         .mv_map{
@@ -84,11 +97,29 @@ main{
         }
       }
     }
+    a.link-entry-form{
+      padding: 20px 40px;
+      border-radius:5px;
+      border:1px solid $color_wht;
+      color:$color_wht;
+      left: 24px;
+      top: 50px;
+      position: relative;
+      z-index: 80;
+      font-size: 20px;
+    }
+    a.link-entry-form:hover{
+      background: $color_wht;
+      color: $color-blk;
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
   article{
     padding: 20px;
     width: 100%;
     color: $color_wht;
+    clear:both;
     ul{
       padding: 0;
     }
@@ -102,6 +133,9 @@ main{
     .stripe>li:nth-child(2n){
       background-color: $color-p-gry;
     }
+    h3{
+      margin: 30px 0 20px;
+    }
   }
   @media all and (min-width:768px){
     article{
@@ -109,19 +143,45 @@ main{
     }
   }
   #about{
+    .image{
+      margin-top: 20px;
+      opacity:.3;
+      width: 100%;
+    }
     @media all and (min-width:768px){
       .detail{
-        max-width: 480px;
+        width: 33.3%;
       }
     }
   }
   #contents{
-
+    @media all and (min-width:768px){
+      width: 66.6%;
+      float: right;
+      .detail{
+        width: 50%;
+        float: left;
+      }
+    }
   }
-  #contact{
+  #timetable{
+    .detail li>ul{
+      margin-left: 60px;
+    }
+    @media all and (min-width:768px){
+      width: 33.3%;
+      float: right;
+    }
+  }
+  #entry{
     h1{
       text-align: center;
       margin: 0.67em 0 1.1em;
     }
   }
+}
+footer{
+  padding: 10px;
+  font-size: 12px;
+  color:$color-wht;
 }
