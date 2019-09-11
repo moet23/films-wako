@@ -1,5 +1,6 @@
 $color_wht: #fff;
 $color-blk: rgba(0,0,0,.6);
+$color-blk: rgba(0,0,0,.6);
 $color-gry: rgba(255,255,255,.05);
 $color-p-gry: rgba(255,255,255,.01);
 $color-grad: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -66,7 +67,7 @@ main{
     p{
       font-size: 30px;
     }
-    #bg-video {
+    .mainvisual-bg-pc {
       position:absolute;
       right:0;
       bottom:0;
@@ -75,6 +76,27 @@ main{
       width:auto;
       height:auto;
       z-index:-1;
+      display: none;
+    }
+    .mainvisual-bg-sp{
+      position:absolute;
+      right:0;
+      bottom:0;
+      min-width:100%;
+      min-height:100%;
+      width: 100%;
+      width:100%;
+      height:auto;
+      z-index:-1;
+      display: block;
+    }
+    @media all and (min-width:768px){
+      .mainvisual-bg-pc {
+        display: block;
+      }
+      .mainvisual-bg-sp {
+        display: none;
+      }
     }
     .overlay{
       background:url('../../assets/images/dot_ptn10-30.png') repeat ;
@@ -87,7 +109,7 @@ main{
         position: absolute;
         width: 100%;
         height: auto;
-        bottom: 24px;
+        bottom: 14px;
       }
       @media all and (min-width:768px){
         .mv_map{
@@ -99,9 +121,10 @@ main{
     }
     a.link-entry-form{
       padding: 20px 40px;
-      border-radius:5px;
-      border:1px solid $color_wht;
-      color:$color_wht;
+      border-radius:0px;
+      background: rgba(255,255,255,.6);
+      color: $color-blk;
+      font-weight: bold;
       left: 24px;
       top: 50px;
       position: relative;
@@ -113,6 +136,15 @@ main{
       color: $color-blk;
       font-weight: bold;
       text-decoration: none;
+    }
+    @media all and (min-width:768px){
+      a.link-entry-form{
+        border:1px solid $color_wht;
+        color:$color_wht;
+        background: none;
+        font-weight: normal;
+        border-radius:5px;
+      }
     }
   }
   article{
@@ -144,9 +176,16 @@ main{
   }
   #about{
     .image{
-      margin-top: 20px;
-      opacity:.3;
+      // margin-top: 20px;
+      // opacity:.3;
       width: 100%;
+    }
+    .yoshikai-robo{
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      margin-top: 20px;
     }
     @media all and (min-width:768px){
       .detail{
