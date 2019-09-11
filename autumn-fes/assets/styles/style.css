@@ -96,7 +96,6 @@ main .mainvisual .mainvisual-bg-sp {
   min-width: 100%;
   min-height: 100%;
   width: 100%;
-  width: 100%;
   height: auto;
   z-index: -1;
   display: block;
@@ -124,7 +123,7 @@ main .mainvisual .overlay .mv_map {
   position: absolute;
   width: 100%;
   height: auto;
-  bottom: 14px;
+  bottom: 0px;
 }
 
 @media all and (min-width: 769px) {
