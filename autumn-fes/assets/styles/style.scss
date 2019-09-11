@@ -2,8 +2,9 @@ $color_wht: #fff;
 $color-blk: rgba(0,0,0,.6);
 $color-blk: rgba(0,0,0,.6);
 $color-gry: rgba(255,255,255,.05);
-$color-p-gry: rgba(255,255,255,.01);
+$color-p-gry: rgba(255,255,200,.01);
 $color-grad: linear-gradient(to top, #09203f 0%, #537895 100%);
+$break: 769px;
 body{
   background:$color-grad;
   font-size: 14px;
@@ -18,7 +19,7 @@ header{
   .menu-no-mobile{
     display: none;
   }
-  @media all and (min-width:768px){
+  @media all and (min-width:$break){
     .menu-no-mobile{
       display: inline;
     }
@@ -54,7 +55,7 @@ main{
         font-weight: bold;
         margin: 0;
       }
-      @media all and (min-width:768px){
+      @media all and (min-width:$break){
         .logo{
           font-size: 150px;
         }
@@ -90,7 +91,7 @@ main{
       z-index:-1;
       display: block;
     }
-    @media all and (min-width:768px){
+    @media all and (min-width:$break){
       .mainvisual-bg-pc {
         display: block;
       }
@@ -111,7 +112,7 @@ main{
         height: auto;
         bottom: 14px;
       }
-      @media all and (min-width:768px){
+      @media all and (min-width:$break){
         .mv_map{
           bottom: 60px;
           right: 40px;
@@ -137,7 +138,7 @@ main{
       font-weight: bold;
       text-decoration: none;
     }
-    @media all and (min-width:768px){
+    @media all and (min-width:$break){
       a.link-entry-form{
         border:1px solid $color_wht;
         color:$color_wht;
@@ -169,7 +170,7 @@ main{
       margin: 30px 0 20px;
     }
   }
-  @media all and (min-width:768px){
+  @media all and (min-width:$break){
     article{
       padding: 40px;
     }
@@ -186,15 +187,17 @@ main{
       width: 100%;
       height: 100%;
       margin-top: 20px;
+      max-width: 250px;
+      margin:auto;
     }
-    @media all and (min-width:768px){
+    @media all and (min-width:$break){
       .detail{
         width: 33.3%;
       }
     }
   }
   #contents{
-    @media all and (min-width:768px){
+    @media all and (min-width:$break){
       width: 66.6%;
       float: right;
       .detail{
@@ -207,7 +210,7 @@ main{
     .detail li>ul{
       margin-left: 60px;
     }
-    @media all and (min-width:768px){
+    @media all and (min-width:$break){
       width: 33.3%;
       float: right;
     }
